@@ -1,0 +1,32 @@
+<ui:composition template="/WEB-INF/template/template.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:bf="http://bootsfaces.net/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<ui:define name="head">
+		<meta http-equiv="Content-Type"
+			content="application/xhtml+xml;charset=utf-8" />
+	</ui:define>
+	<ui:define name="content">
+		<bf:container>
+			<bf:row>
+				<bf:column col-lg="4" offset="4">
+					<bf:panel collapsed="false" collapsible="false">
+						<f:facet name="heading">
+							<h:outputText value="Login" />
+							<bf:badge style="margin-left:10px" value="gaps 1.0" />
+						</f:facet>
+						<h1>Acceso Restringido</h1>
+						<h:form id="form" prependId="false">
+				Usted no tiene acceso a esta pagian ingrese. Cierre session e ingrese co el usuario respectivo
+					
+					<bf:commandButton ajax="false" action="login" value="Salir"
+								styleClass="btn-block" look="success" size="lg"
+								iconAlign="block" />
+						</h:form>
+					</bf:panel>
+				</bf:column>
+			</bf:row>
+		</bf:container>
+	</ui:define>
+</ui:composition>

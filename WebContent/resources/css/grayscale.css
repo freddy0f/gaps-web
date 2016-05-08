@@ -1,0 +1,61 @@
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+@media ( min-width :768px) {
+	.navbar-default {
+		padding: 20px 0 !important;
+		border-bottom: 0 !important;
+		-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out
+			!important;
+		-moz-transition: background .5s ease-in-out, padding .5s ease-in-out
+			!important;
+		transition: background .5s ease-in-out, padding .5s ease-in-out
+			!important;
+	}
+	.navbar-default.top-nav-collapse {
+		padding: 0 !important;
+	}
+}
+
+.container-section {
+	padding-top: 35px;
+	height: toggle;
+}
+
+.container-section-main {
+	padding-top: 35px;
+	text-align: center;
+	height: toggle;
+}
+
+.loginForm {
+	padding-top: 0px;
+}
+
+.brand-heading {
+	font-size: 40px;
+}
+
+.intro-text {
+	font-size: 18px;
+}
+
+@media ( min-width :767px) {
+	.container-section-main {
+		padding-top: 100px !important;
+	}
+	.container-section {
+		padding-top: 55px !important;
+	}
+	.brand-heading {
+		font-size: 100px !important;
+	}
+	.intro-text {
+		font-size: 26px;
+	}
+	.loginForm {
+		padding-top: 50px;
+	}
+}

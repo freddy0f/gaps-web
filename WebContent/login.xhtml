@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/WEB-INF/template/template.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:bf="http://bootsfaces.net/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<ui:define name="content">
+		<bf:container>
+			<bf:row>
+				<bf:column col-lg="4" offset="4">
+					<bf:panel collapsed="false" collapsible="false">
+						<f:facet name="heading">
+							<h:outputText value="Login" />
+							<bf:badge style="margin-left:10px" value="gaps 1.0" />
+						</f:facet>
+						<h1>Ingresar</h1>
+						<h:form id="form" prependId="false"
+							onsubmit="document.getElementById('form').action='j_security_check';">
+							<bf:messages globalOnly="true" />
+							<bf:inputText placeholder="Usuario" id="j_username"
+								required="true" />
+							<bf:inputSecret placeholder="Contrasenia" required="true"
+								tooltip-position="right" id="j_password" />
+							<bf:selectBooleanCheckbox caption="Recordarme"
+								tooltipPosition="left" />
+							<bf:commandButton ajax="false" value="Ingresar" id="j_submit"
+								styleClass="btn-block" look="success" size="lg"
+								iconAlign="block" />
+						</h:form>
+					</bf:panel>
+				</bf:column>
+			</bf:row>
+		</bf:container>
+	</ui:define>
+</ui:composition>

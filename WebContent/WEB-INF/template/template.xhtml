@@ -1,0 +1,116 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:bf="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>GAPS</title>
+	<ui:insert name="head" />
+	<meta http-equiv="Content-Type"
+		content="application/xhtml+xml;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description"
+		content="Sistema de Administración de Agua Potable." />
+	<meta name="keywords"
+		content="jsf, jsf2, faces, mojarra, bootstrap, jquery, framework, java, enterprise, server, usability, web, html5, easy, modern, website" />
+	<meta name="author" content="Freddy G. Castillo C." />
+	<meta name="robots" content="index, follow" />
+	<meta name="revisit-after" content="7 days" />
+	<meta name="DISTRIBUTION" content="GLOBAL" />
+	<meta http-equiv="PRAGMA" content="NO-CACHE" />
+	<meta http-equiv="Expires" content="604800" />
+	<link rel="shortcut icon" type="image/x-icon"
+		href="#{request.contextPath}/resources/img/favicon.png" />
+	<h:outputStylesheet library="css" name="gaps.css" />
+	<h:outputStylesheet library="css" name="grayscale.css" />
+	<h:outputStylesheet library="css" name="font-awesome.min.css" />
+	<h:outputScript library="js" name="pageEvents.js" />
+</h:head>
+<h:body>
+	<h:form id="navBar">
+		<bf:navBar fixed="top" styleClass="" brand="GAPS" fluid="true"
+			brandHref="#{request.contextPath}/">
+			<bf:navbarLinks pull="left">
+				<bf:navLink outcome="/pages/secretario/secretario"
+					value="#{msg['template.module.secretary']}" />
+				<bf:navLink outcome="/pages/secretario/secretario"
+					value="#{msg['template.module.treasury']}" />
+				<bf:navLink value="#{msg['template.module.administration']}"
+					outcome="/pages/admin/admin" />
+				<bf:navLink value="#{msg['template.module.public']}"
+					outcome="/pages/publico/consultarValor" />
+				<bf:dropMenu value="#{msg['template.thema']}" styleClass="themeMenu">
+					<bf:navCommandLink value="cerulean" ajax="true"
+						onclick="ajax:skinBean.setTheme('cerulean');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="cosmo" ajax="true"
+						onclick="ajax:skinBean.setTheme('cosmo');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="cyborg" ajax="true"
+						onclick="ajax:skinBean.setTheme('cyborg');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="darkly" ajax="true"
+						onclick="ajax:skinBean.setTheme('darkly');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="default" ajax="true"
+						onclick="ajax:skinBean.setTheme('default');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="journal" ajax="true"
+						onclick="ajax:skinBean.setTheme('journal');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="lumen" ajax="true"
+						onclick="ajax:skinBean.setTheme('lumen');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="other" ajax="true"
+						onclick="ajax:skinBean.setTheme('other');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="paper" ajax="true"
+						onclick="ajax:skinBean.setTheme('paper');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="readable" ajax="true"
+						onclick="ajax:skinBean.setTheme('readable');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="sandstone" ajax="true"
+						onclick="ajax:skinBean.setTheme('sandstone');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="simplex" ajax="true"
+						onclick="ajax:skinBean.setTheme('simplex');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="spacelab" ajax="true"
+						onclick="ajax:skinBean.setTheme('spacelab');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="yeti" ajax="true"
+						onclick="ajax:skinBean.setTheme('yeti');" oncomplete="loadPage();" />
+					<bf:navCommandLink value="superhero" ajax="true"
+						onclick="ajax:skinBean.setTheme('superhero');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="united" ajax="true"
+						onclick="ajax:skinBean.setTheme('united');"
+						oncomplete="loadPage();" />
+					<bf:navCommandLink value="slate" ajax="true"
+						onclick="ajax:skinBean.setTheme('slate');"
+						oncomplete="loadPage();" />
+				</bf:dropMenu>
+			</bf:navbarLinks>
+			<bf:navbarLinks pull="right">
+				<bf:dropMenu value="#{msg['template.language']}">
+					<h:commandLink value="#{msg['template.language.spanish']}"
+						actionListener="#{skinBean.setLocale('es_ES')}" />
+					<h:commandLink value="#{msg['template.language.english']}"
+						actionListener="#{skinBean.setLocale('en')}" />
+				</bf:dropMenu>
+			</bf:navbarLinks>
+		</bf:navBar>
+	</h:form>
+	<bf:container fluid="true" id="content"
+		styleClass="container-section-main">
+		<ui:insert name="toolbar" />
+		<ui:insert name="content" />
+	</bf:container>
+	<h:outputScript library="js" name="jquery.js" />
+	<h:outputScript library="js" name="jquery.easing.min.js" />
+	<h:outputScript library="js" name="grayscale.js" />
+</h:body>
+</html>

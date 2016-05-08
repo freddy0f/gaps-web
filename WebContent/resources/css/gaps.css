@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+.dropdown-menu > li > a{
+	cursor: pointer;
+}
+.dropdown-menu > a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.428571429;
+	white-space: nowrap;
+}
+.dropdown-menu > a:hover,.dropdown-menu > a:focus {
+	text-decoration: none;
+}
